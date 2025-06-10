@@ -9,7 +9,7 @@ export function cn(...inputs: ClassValue[]) {
 export function constructMetadata({
   title = 'MALTHUS – Développeur Web & Mobile',
   description = 'Bienvenue sur le portfolio de MALTHUS, développeur web et mobile passionné. Découvrez ses projets, compétences et réalisations dans le développement d’applications modernes et performantes.',
-  image = '/og image fond noir  portfolio.png',
+  image = '@/public/og image fond noir  portfolio.png',
   icons = '/favicon.ico',
 }: {
   title?: string;
