@@ -23,7 +23,7 @@ export default function NavBar() {
 		<>
 			<motion.nav
 				className={cn(
-					'border-b bg-white border-slate-100 w-full p-6 h-auto pointer-events-auto'
+					'border-b bg-white border-slate-100 w-full p-6 h-auto  pointer-events-auto'
 				)}
 				initial={{ height: 80 }}
 				animate={{ height: on && isSmallDevice ? 700 : 80 }}
@@ -31,37 +31,39 @@ export default function NavBar() {
 				exit={{ height: 80 }}
 			>
 				<div className="flex items-center w-full justify-between">
-					<div>
-						<Link
-							href={'/'}
-							className="relative text-3xl font-extrabold tracking-tighter cursor-pointer uppercase"
-						>
-							Malthus
-						</Link>
-					</div>
+					<Link
+						href={'/'}
+						className="relative text-3xl font-extrabold tracking-tighter cursor-pointer uppercase"
+					>
+						Malthus
+					</Link>
 					<div className="relative flex items-center justify-center">
 						<ul className="lg:flex gap-5 items-center hidden justify-center">
 							<Link
 								href={'/works'}
-								className="capitalize font-medium tracking-tighter text-lg"
+								className="capitalize font-medium tracking-tighter hover:opacity-75 text-lg"
 							>
 								Mes projets
 							</Link>
 							<Link
 								href={'/about'}
-								className="capitalize font-medium tracking-tighter text-lg hover:text-blue-600 transition-colors duration-200"
+								className="capitalize font-medium tracking-tighter text-lg hover:opacity-75 transition-colors duration-200"
 								aria-label="À propos de moi"
 							>
 								À propos
 							</Link>
 							<Link
 								href={'/contact'}
-								className="capitalize font-medium tracking-tighter text-lg"
+								className="capitalize font-medium tracking-tighter hover:opacity-75 text-lg"
 							>
 								contact
 							</Link>
 						</ul>
-						<button onClick={() => setOn(!on)}>
+						<button
+							onClick={() => {
+								setOn(!on);
+							}}
+						>
 							<Icon className="sm:hidden block cursor-pointer" name={'menu'} />
 						</button>
 					</div>

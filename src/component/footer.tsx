@@ -1,5 +1,6 @@
 import React from 'react';
 import RippleWave from './ripple';
+import Link from 'next/link';
 
 export default function Footer() {
 	return (
@@ -8,8 +9,18 @@ export default function Footer() {
 				<div className="sm:p-0 p-4">
 					<ul className="flex items-center lg:justify-end gap-7">
 						<li className="text-md capitalize font-medium">linkedin</li>
-						<li className="text-md capitalize font-medium">X</li>
-						<li className="text-md capitalize font-medium">github</li>
+						<Link
+							href="https://x.com/MalthusElie"
+							className="text-md capitalize font-medium"
+						>
+							X
+						</Link>
+						<Link
+							href="https://github.com/echicouamalthus"
+							className="text-md capitalize font-medium"
+						>
+							github
+						</Link>
 					</ul>
 				</div>
 
@@ -45,7 +56,7 @@ export default function Footer() {
 					<div className="flex items-center sm:w-auto w-full justify-between flex-1/12">
 						<div>
 							<p className="flex flex-col">
-								<span>+81 (0)90 1234 5678</span>
+								<span>+225 0701624246</span>
 								<span>echicouamalthus@gmail.com</span>
 							</p>
 						</div>

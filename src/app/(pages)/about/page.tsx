@@ -10,8 +10,9 @@ import {
 	AccordionItem,
 	AccordionTrigger,
 } from '@/components/ui/accordion';
-import { Circle, SwatchBook, Pen, Star } from 'lucide-react';
+import { Circle, Pen, Star } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useMediaQuery } from '@uidotdev/usehooks';
 
 const ServicesLinks = [
 	{
@@ -21,20 +22,14 @@ const ServicesLinks = [
 			'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
 	},
 	{
-		icon: <SwatchBook />,
-		title: 'Graphic Design',
-		image:
-			'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-	},
-	{
 		icon: <Pen />,
-		title: 'Brand Design',
+		title: 'Développement web',
 		image:
 			'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
 	},
 	{
 		icon: <Star />,
-		title: 'Web Development',
+		title: 'Développement mobile',
 		image:
 			'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
 	},
@@ -76,6 +71,13 @@ const imageVariant = {
 
 export default function Page() {
 	const [activeIndex, setActiveIndex] = React.useState<number | null>(null);
+	const isClient = typeof window !== 'undefined';
+
+	const isSmallDevice = isClient
+		? // eslint-disable-next-line react-hooks/rules-of-hooks
+		  useMediaQuery('only screen and (max-width : 640px)')
+		: false;
+
 	return (
 		<div>
 			<div className="max-w-7xl mx-auto flex flex-col justify-between sm:gap-30 gap-10 px-4 py-8">
@@ -86,7 +88,7 @@ export default function Page() {
 							animate={{ y: 0 }}
 							transition={{ duration: 0.4, delay: 0.3 }}
 							className="sm:text-[10rem] text-7xl
-             sm:leading-48 tracking-tighter uppercase font-semibold"
+			 sm:leading-48 tracking-tighter uppercase font-semibold"
 						>
 							MAlthus
 						</MotionH4>
@@ -98,7 +100,7 @@ export default function Page() {
 							animate={{ y: 0 }}
 							transition={{ duration: 0.4, delay: 0.3 }}
 							className="sm:text-[10rem] text-7xl
-             sm:leading-48 tracking-tighter uppercase font-semibold"
+			 sm:leading-48 tracking-tighter uppercase font-semibold"
 						>
 							Echicoua
 						</MotionH4>
@@ -114,7 +116,7 @@ export default function Page() {
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ duration: 0.6, delay: 0.6 }}
 					>
-						<h4 className="font-medium text-4xl tracking-tighter">about.</h4>
+						<h4 className="font-medium text-4xl tracking-tighter">à propos.</h4>
 
 						<button className="bg-gray-100 text-black py-4 px-6 w-fit font-medium tracking-tighter">
 							Lire.cv
@@ -128,8 +130,9 @@ export default function Page() {
 						transition={{ duration: 0.6, delay: 0.6 }}
 					>
 						<p className="sm:text-5xl text-3xl text-justify font-medium tracking-tighter">
-							I collaborate with businesses of all sizes worldwide, using the
-							latest technologies. My designs have also earned multiple awards.
+							Je collabore avec des entreprises de toutes tailles à travers le
+							monde, en utilisant les dernières technologies. Mes créations ont
+							également reçu de multiples récompenses.
 						</p>
 					</MotionDiv>
 
@@ -157,9 +160,9 @@ export default function Page() {
 							className="sm:w-[20rem]"
 						>
 							<p className="sm:text-xl text-xl text-justify font-medium tracking-tighter">
-								I&apos;m dedicated to crafting beautiful and highly functional
-								designs that seamlessly align with my clients&apos; unique needs
-								and long-term goals.
+								Je suis dédié à la création de designs beaux et hautement
+								fonctionnels qui s’alignent parfaitement avec les besoins
+								uniques et les objectifs à long terme de mes clients.
 							</p>
 						</MotionDiv>
 					</div>
@@ -176,7 +179,7 @@ export default function Page() {
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ duration: 0.6, delay: 0.6 }}
 					>
-						<h4 className="font-medium text-4xl tracking-tighter">service.</h4>
+						<h4 className="font-medium text-4xl tracking-tighter">services.</h4>
 					</MotionDiv>
 
 					<div>
@@ -187,7 +190,9 @@ export default function Page() {
 									className={cn(
 										'relative border-b border-slate-200 p-8 first:border-t cursor-pointer'
 									)}
-									onMouseOver={() => setActiveIndex(index)}
+									onMouseOver={() =>
+										setActiveIndex(isSmallDevice ? null : index)
+									}
 									onMouseLeave={() => setActiveIndex(null)}
 								>
 									<div className="relative z-10">
@@ -250,56 +255,58 @@ export default function Page() {
 						>
 							<AccordionItem value="item-1" className="bg-stone-100">
 								<AccordionTrigger className="text-xl font-medium p-10">
-									What is your creative design process like?
+									Quel est votre processus créatif de design ?
 								</AccordionTrigger>
 								<AccordionContent className="text-lg font-normal px-10">
-									My design process starts with fully understanding your goals
-									and needs. I begin with research and brainstorming to gather
-									insights, followed by sketching initial concepts. Once we
-									agree on a creative direction, I develop detailed designs and
-									make revisions based on your feedback. I strive for a
-									seamless, collaborative process, ensuring that each step
-									brings us closer to the perfect solution.
+									Mon processus de design commence par une compréhension
+									complète de vos objectifs et besoins. Je débute par la
+									recherche et le brainstorming pour recueillir des idées,
+									suivis de croquis des concepts initiaux. Une fois la direction
+									créative validée, je développe des designs détaillés et
+									effectue des révisions selon vos retours. Je vise un processus
+									collaboratif et fluide, pour garantir que chaque étape nous
+									rapproche de la solution idéale.
 								</AccordionContent>
 							</AccordionItem>
 							<AccordionItem value="item-2" className="bg-stone-100">
 								<AccordionTrigger className="text-xl font-medium p-10">
-									What is your typical project timeline?
+									Quel est le délai typique pour un projet ?
 								</AccordionTrigger>
 								<AccordionContent className="text-lg font-normal px-10">
-									The timeline varies depending on the complexity of the
-									project. Typically, smaller projects like a logo design or
-									single-page website take 1-2 weeks, while larger projects such
-									as full brand identity or multi-page websites can take 4-6
-									weeks. I’ll provide a detailed project timeline once we define
-									the scope of the project, and I always aim to deliver on time.
+									Le délai varie selon la complexité du projet. En général, les
+									petits projets comme un logo ou un site d’une page prennent 1
+									à 2 semaines, tandis que les projets plus importants comme une
+									identité de marque complète ou un site multi-pages prennent 4
+									à 6 semaines. Je fournis un planning détaillé une fois le
+									périmètre défini, et je m’efforce toujours de respecter les
+									délais.
 								</AccordionContent>
 							</AccordionItem>
 							<AccordionItem value="item-3" className="bg-stone-100">
 								<AccordionTrigger className="text-xl font-medium p-10">
-									How do I get started on a project with you?
+									Comment démarrer un projet avec vous ?
 								</AccordionTrigger>
 								<AccordionContent className="text-lg font-normal px-10">
-									Getting started is easy! Simply reach out through the contact
-									form or send me an email with details about your project.
-									We’ll schedule an initial consultation to discuss your vision,
-									goals, and requirements. From there, I’ll create a tailored
-									proposal outlining the project scope, timeline, and pricing.
-									Once everything is agreed upon, we can immediately start the
-									creative process!
+									C’est simple ! Contactez-moi via le formulaire ou envoyez-moi
+									un email avec les détails de votre projet. Nous organiserons
+									une première consultation pour discuter de votre vision, de
+									vos objectifs et de vos besoins. Ensuite, je vous proposerai
+									une offre sur-mesure avec le périmètre, le planning et le
+									tarif. Une fois tout validé, nous pouvons commencer le
+									processus créatif !
 								</AccordionContent>
 							</AccordionItem>
 							<AccordionItem value="item-4" className="bg-stone-100">
 								<AccordionTrigger className="text-xl font-medium p-10">
-									What should I do if you&apos;re fully booked??
+									Que faire si je suis déjà complet ?
 								</AccordionTrigger>
 								<AccordionContent className="text-lg font-normal px-10">
-									If I&apos;m currently fully booked, don’t worry! I maintain a
-									waiting list, and I’ll notify you as soon as I have
-									availability. I recommend reaching out as early as possible to
-									secure a spot in my schedule. In the meantime, I’m happy to
-									offer guidance or advice on preparing for the project so we
-									can hit the ground running once I’m available.
+									Si je suis actuellement complet, pas d’inquiétude ! Je tiens
+									une liste d’attente et je vous préviens dès qu’une place se
+									libère. Je vous conseille de me contacter le plus tôt possible
+									pour réserver un créneau. En attendant, je peux vous
+									conseiller ou vous aider à préparer votre projet pour que nous
+									puissions démarrer rapidement dès que possible.
 								</AccordionContent>
 							</AccordionItem>
 						</Accordion>

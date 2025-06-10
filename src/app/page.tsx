@@ -30,7 +30,7 @@ export default function Home() {
 								animate={{ y: 0 }}
 								transition={{ duration: 0.4, delay: 0.3 }}
 								className="sm:text-[12rem] text-7xl
-       sm:leading-48 tracking-tighter uppercase font-semibold"
+	   sm:leading-48 tracking-tighter uppercase font-semibold"
 							>
 								Malthus
 							</MotionH4>
@@ -42,7 +42,7 @@ export default function Home() {
 								animate={{ y: 0 }}
 								transition={{ duration: 0.4, delay: 0.3 }}
 								className="sm:text-[12rem] text-7xl
-       sm:leading-48 tracking-tighter uppercase font-semibold"
+	   sm:leading-48 tracking-tighter uppercase font-semibold"
 							>
 								echicoua
 							</MotionH4>
@@ -60,7 +60,7 @@ export default function Home() {
 							src={
 								'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 							}
-							alt="myphoto"
+							alt="ma photo"
 							width={900}
 							height={900}
 						/>
@@ -91,9 +91,9 @@ export default function Home() {
 
 					<div className="sm:col-span-4">
 						<p className="sm:text-5xl text-2xl text-justify font-medium tracking-tighter">
-							Hello, I&apos;m a freelancer specializing in minimal design with
-							10 years of expertise — based in Tokyo, working remote. Let’s
-							create!
+							Bonjour, je suis freelance spécialisé dans le design minimaliste
+							avec 10 ans d&apos;expérience — basé à Tokyo, travaillant à
+							distance. Créons ensemble !
 						</p>
 					</div>
 				</MotionDiv>
@@ -109,10 +109,10 @@ export default function Home() {
 						whileInView={{ y: 0, opacity: 1 }}
 						transition={{ duration: 0.6, delay: 0.3 }}
 					>
-						<h4 className="font-medium text-4xl tracking-tighter">work.</h4>
+						<h4 className="font-medium text-4xl tracking-tighter">travaux.</h4>
 
 						<button className="bg-gray-100 text-black py-4 px-6 w-fit capitalize font-medium tracking-tighter">
-							show more
+							voir plus
 						</button>
 					</MotionDiv>
 
@@ -128,7 +128,7 @@ export default function Home() {
 								src={
 									'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 								}
-								alt="myphoto"
+								alt="ma photo"
 								width={900}
 								height={900}
 							/>
@@ -147,7 +147,7 @@ export default function Home() {
 								src={
 									'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 								}
-								alt="myphoto"
+								alt="ma photo"
 								width={900}
 								height={900}
 							/>
@@ -166,7 +166,7 @@ export default function Home() {
 								src={
 									'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 								}
-								alt="myphoto"
+								alt="ma photo"
 								width={900}
 								height={900}
 							/>
@@ -185,7 +185,7 @@ export default function Home() {
 								src={
 									'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 								}
-								alt="myphoto"
+								alt="ma photo"
 								width={900}
 								height={900}
 							/>
@@ -212,10 +212,10 @@ export default function Home() {
 						whileInView={{ y: 0, opacity: 1 }}
 						transition={{ duration: 0.6, delay: 0.6 }}
 					>
-						<h4 className="font-medium text-4xl tracking-tighter">about.</h4>
+						<h4 className="font-medium text-4xl tracking-tighter">à propos.</h4>
 
 						<button className="bg-gray-100 text-black py-4 px-6 w-fit capitalize font-medium tracking-tighter">
-							show more
+							voir plus
 						</button>
 					</MotionDiv>
 
@@ -226,8 +226,9 @@ export default function Home() {
 						transition={{ duration: 0.6, delay: 0.6 }}
 					>
 						<p className="sm:text-5xl text-2xl text-justify font-medium tracking-tighter">
-							I collaborate with businesses of all sizes worldwide, using the
-							latest technologies. My designs have also earned multiple awards.
+							Je collabore avec des entreprises de toutes tailles à travers le
+							monde, en utilisant les dernières technologies. Mes créations ont
+							également reçu de nombreux prix.
 						</p>
 					</MotionDiv>
 
@@ -255,9 +256,9 @@ export default function Home() {
 							className="sm:w-[30rem]"
 						>
 							<p className="sm:text-xl text-xl text-justify font-medium tracking-tighter">
-								I&apos;m dedicated to crafting beautiful and highly functional
-								designs that seamlessly align with my clients&apos; unique needs
-								and long-term goals.
+								Je m&apos;engage à créer des designs beaux et très fonctionnels
+								qui s&apos;alignent parfaitement avec les besoins uniques et les
+								objectifs à long terme de mes clients.
 							</p>
 						</MotionDiv>
 					</div>
