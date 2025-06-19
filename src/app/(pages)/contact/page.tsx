@@ -31,7 +31,7 @@ export default function Page() {
 								className="sm:text-[10rem] text-7xl
                    sm:leading-48 tracking-tighter uppercase font-semibold"
 							>
-								Envoyer un
+								Envoyer une
 							</MotionH4>
 						</div>
 
@@ -94,7 +94,7 @@ export default function Page() {
 								className="bg-black text-xl tracking-tighter font-semibold text-white focus:outline-none focus-visible:border-b focus-visible:border-black p-6 capitalize"
 								type="submit"
 							>
-								send it!
+								L&apos;envoyer !
 							</button>
 						</form>
 					</div>

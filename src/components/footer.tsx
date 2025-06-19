@@ -8,7 +8,7 @@ export default function Footer() {
 			<section className="max-w-7xl lg:mx-auto flex h-full w-full flex-col sm:justify-around justify-end sm:p-4 gap-6">
 				<div className="sm:p-0 p-4">
 					<ul className="flex items-center lg:justify-end gap-7">
-						<li className="text-md capitalize font-medium">linkedin</li>
+						<li className="text-md capitalize font-medium">linkedlin</li>
 						<Link
 							href="https://x.com/MalthusElie"
 							className="text-md capitalize font-medium"
@@ -40,9 +40,12 @@ export default function Footer() {
 					</div>
 
 					<div className=" flex sm:flex-row flex-col-reverse sm:items-center items-start gap-5">
-						<button className="bg-white text-black py-4 px-6 sm:w-fit w-full">
-							Contactez-moi
-						</button>
+						<Link
+							href={'/contact'}
+							className="bg-white py-4 px-6 sm:w-fit w-full flex items-center justify-center"
+						>
+							<span className="text-black">Contactez-moi</span>
+						</Link>
 						<button className="flex items-center relative overflow-hidden gap-3 p-4">
 							<RippleWave />
 							<span className="capitalize z-10">

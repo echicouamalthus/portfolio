@@ -27,6 +27,7 @@ export default function Home() {
 						<button className="bg-gray-100 text-black py-4 px-6 w-fit capitalize font-medium tracking-tighter">
 							voir plus
 						</button>
+
 					</MotionDiv>
 
 					<MotionDiv

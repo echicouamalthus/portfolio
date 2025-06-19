@@ -87,10 +87,11 @@ export default function Hero() {
 				</div>
 
 				<div className="sm:col-span-4">
-					<p className="sm:text-5xl text-2xl text-justify font-medium tracking-tighter">
-						Bonjour, je suis freelance spécialisé dans le design minimaliste
-						avec 10 ans d&apos;expérience — basé à Tokyo, travaillant à
-						distance. Créons ensemble !
+					<p className="sm:text-4xl text-2xl text-justify font-medium tracking-tighter">
+						Bonjour, je suis freelance spécialisé dans le develeppement
+						d&apos;application web et mobile depuis 2 ans — vivant à Abidjan,
+						travaillant à distance. Créons ensemble la nouvelle technologie de
+						demain !
 					</p>
 				</div>
 			</MotionDiv>

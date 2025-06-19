@@ -50,7 +50,7 @@ export default function NavBar() {
 								className="capitalize font-medium tracking-tighter text-lg hover:opacity-75 transition-colors duration-200"
 								aria-label="À propos de moi"
 							>
-								À propos
+								Qui suis-je ?
 							</Link>
 							<Link
 								href={'/contact'}
@@ -108,7 +108,7 @@ export default function NavBar() {
 										setOn(!on);
 									}}
 								>
-									À propos
+									Qui suis-je ?
 								</motion.li>
 							</div>
 
