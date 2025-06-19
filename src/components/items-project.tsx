@@ -3,7 +3,7 @@
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { useRouter } from 'next/navigation';
-import { ArrowUpRight, MoveUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 interface ItemsProjectProps {
 	image: string | StaticImageData;
