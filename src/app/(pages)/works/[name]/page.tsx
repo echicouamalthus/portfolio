@@ -19,6 +19,7 @@ import defi_1 from '../../../../../public/details project.png';
 import defi_2 from '../../../../../public/details project 2.png';
 
 import Link from 'next/link';
+import { ImageZoom } from '@/components/ui/kibo-ui/image-zoom';
 
 export default async function page({
 	params,
@@ -113,7 +114,7 @@ export default async function page({
 			{/* about */}
 			<div className="my-8 border-t-2 border-slate-100" />
 
-			<div className="max-w-7xl mx-auto px-4 flex flex-col gap-8">
+			<div className="max-w-7xl mx-auto px-4 flex flex-col gap-8 sm:justify-between justify-around">
 				<MotionDiv
 					className="flex items-center justify-between"
 					initial={{ y: 80, opacity: 0 }}
@@ -148,12 +149,12 @@ export default async function page({
 				</MotionDiv>
 
 				<MotionDiv
-					className="sm:aspect-video aspect-square relative"
+					className="sm:aspect-video aspect-auto relative"
 					initial={{ y: 80, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}
 					transition={{ duration: 0.6, delay: 0.6 }}
 				>
-					<VideoPlayer className="overflow-hidden rounded-lg border h-[600px] ">
+					<VideoPlayer className="overflow-hidden rounded-lg border sm:h-[600px] h-auto">
 						<VideoPlayerContent
 							slot="media"
 							src="/landing page de coque personnalisable.mp4"
@@ -205,19 +206,23 @@ export default async function page({
 
 				<div className="grid sm:grid-cols-2 gap-6">
 					<div className="flex items-center justify-center">
-						<Image
-							className="drop-shadow-sm rounded-lg"
-							src={defi_1}
-							alt="details project"
-						/>
+						<ImageZoom>
+							<Image
+								className="drop-shadow-sm rounded-lg"
+								src={defi_1}
+								alt="details project"
+							/>
+						</ImageZoom>
 					</div>
 
 					<div className="flex items-center justify-center ">
-						<Image
-							className="drop-shadow-sm rounded-lg"
-							src={defi_2}
-							alt="détails projet"
-						/>
+						<ImageZoom>
+							<Image
+								className="drop-shadow-sm rounded-lg"
+								src={defi_2}
+								alt="détails projet"
+							/>
+						</ImageZoom>
 					</div>
 				</div>
 			</div>

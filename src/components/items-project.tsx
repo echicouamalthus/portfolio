@@ -28,7 +28,7 @@ export default function ItemsProject({ image, link }: ItemsProjectProps) {
 				</div>
 			</div>
 
-			<div className="absolute top-0 right-0 bg-white m-2 opacity-0 group-hover:opacity-100 transition-all duration-600">
+			<div className="absolute top-0 right-0 bg-white m-2 sm:opacity-0 opacity-100 sm:group-hover:opacity-100 transition-all duration-600">
 				<ArrowUpRight className="size-12 text-stone-700" strokeWidth={1} />
 			</div>
 		</div>
