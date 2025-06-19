@@ -1,6 +1,6 @@
 'use client';
 
-import { Icon } from '@/component/icons';
+import { Icon } from '@/components/icons';
 import { MotionDiv, MotionH4 } from '@/lib/motion-dev';
 import React, { useState } from 'react';
 
@@ -24,27 +24,27 @@ export default function Page() {
 				<div className="flex lg:flex-row flex-col-reverse justify-between items-start gap-10">
 					<div>
 						<div className="relative overflow-hidden px-2">
-                            <MotionH4
-                                initial={{ y: 200 }}
-                                animate={{ y: 0 }}
-                                transition={{ duration: 0.4, delay: 0.3 }}
-                                className="sm:text-[10rem] text-7xl
+							<MotionH4
+								initial={{ y: 200 }}
+								animate={{ y: 0 }}
+								transition={{ duration: 0.4, delay: 0.3 }}
+								className="sm:text-[10rem] text-7xl
                    sm:leading-48 tracking-tighter uppercase font-semibold"
-                            >
-                                Envoyer un
-                            </MotionH4>
+							>
+								Envoyer un
+							</MotionH4>
 						</div>
 
 						<div className="relative overflow-hidden px-2">
-                            <MotionH4
-                                initial={{ y: 200 }}
-                                animate={{ y: 0 }}
-                                transition={{ duration: 0.4, delay: 0.3 }}
-                                className="sm:text-[10rem] text-7xl
+							<MotionH4
+								initial={{ y: 200 }}
+								animate={{ y: 0 }}
+								transition={{ duration: 0.4, delay: 0.3 }}
+								className="sm:text-[10rem] text-7xl
                    sm:leading-48 tracking-tighter uppercase font-semibold"
-                            >
-                                Demande
-                            </MotionH4>
+							>
+								Demande
+							</MotionH4>
 						</div>
 					</div>
 				</div>

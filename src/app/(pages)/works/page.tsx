@@ -1,5 +1,6 @@
 import { MotionDiv, MotionH4 } from '@/lib/motion-dev';
-import Image from 'next/image';
+import covermagic from '../../../../public/cover projet with app.png';
+import ItemsProject from '@/components/items-project';
 
 export default function page() {
 	return (
@@ -39,82 +40,7 @@ export default function page() {
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ duration: 0.6, delay: 0.5 }}
 					>
-						<div className="aspect-square w-full relative overflow-hidden group">
-							<Image
-								className="absolute size-full object-cover group-hover:scale-150 transition-all duration-600"
-								src={
-									'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-								}
-								alt="myphoto"
-								width={900}
-								height={900}
-							/>
-
-							<div className="relative size-full flex flex-col justify-end">
-								<div className="p-8 bg-gradient-to-b from-transparent via-transparent to-black overflow-hidden">
-									<p className="text-5xl text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-										Stone Mind
-									</p>
-								</div>
-							</div>
-						</div>
-						<div className="aspect-square w-full relative overflow-hidden group">
-							<Image
-								className="absolute size-full object-cover group-hover:scale-150 transition-all duration-600"
-								src={
-									'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-								}
-								alt="myphoto"
-								width={900}
-								height={900}
-							/>
-
-							<div className="relative size-full flex flex-col justify-end">
-								<div className="p-8 bg-gradient-to-b from-transparent via-transparent to-black overflow-hidden">
-									<p className="text-5xl text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-										Stone Mind
-									</p>
-								</div>
-							</div>
-						</div>
-						<div className="aspect-square w-full relative overflow-hidden group">
-							<Image
-								className="absolute size-full object-cover group-hover:scale-150 transition-all duration-600"
-								src={
-									'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-								}
-								alt="myphoto"
-								width={900}
-								height={900}
-							/>
-
-							<div className="relative size-full flex flex-col justify-end">
-								<div className="p-8 bg-gradient-to-b from-transparent via-transparent to-black overflow-hidden">
-									<p className="text-5xl text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-										Stone Mind
-									</p>
-								</div>
-							</div>
-						</div>
-						<div className="aspect-square w-full relative overflow-hidden group">
-							<Image
-								className="absolute size-full object-cover group-hover:scale-150 transition-all duration-600"
-								src={
-									'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-								}
-								alt="myphoto"
-								width={900}
-								height={900}
-							/>
-
-							<div className="relative size-full flex flex-col justify-end">
-								<div className="p-8 bg-gradient-to-b from-transparent via-transparent to-black overflow-hidden">
-									<p className="text-5xl text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-										Stone Mind
-									</p>
-								</div>
-							</div>
-						</div>
+						<ItemsProject image={covermagic} link={'case-gadget'} />
 					</MotionDiv>
 				</div>
 			</div>
