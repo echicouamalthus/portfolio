@@ -48,32 +48,29 @@ export default function Footer() {
 						</Link>
 						<button className="flex items-center relative overflow-hidden gap-3 p-4">
 							<RippleWave />
-							<span className="capitalize z-10">
-								disponible pour des missions
-							</span>
+							<span className="z-10">Disponible pour des missions</span>
 						</button>
 					</div>
 				</div>
 
 				<div className="flex sm:flex-row flex-col items-center justify-between gap-4 sm:p-0 p-4">
-					<div className="flex items-center sm:w-auto w-full justify-between flex-1/12">
+					<div className="flex items-center sm:w-auto w-full md:justify-between gap-7 md:flex-1/12 flex-none">
 						<div>
-							<p className="flex flex-col">
+							<p className="flex flex-col md:text-md text-xs">
 								<span>+225 0701624246</span>
 								<span>echicouamalthus@gmail.com</span>
 							</p>
 						</div>
 
 						<div>
-							<p className="flex flex-col">
-								<span>Designer & Developpeur</span>
-								<span>Par Malthus</span>
+							<p className="flex flex-col items-end md:text-md text-xs">
+								<span>Designer & Developpeur Par Malthus</span>
 							</p>
 						</div>
 					</div>
 
 					<div className="sm:border-none border-t border-slate-50/15 w-full lg:flex-1 flex justify-end">
-						<div className="flex flex-col sm:items-end items-center sm:justify-end justify-center w-full sm:p-0 p-2">
+						<div className="flex flex-col sm:items-end items-center sm:justify-end justify-center w-full sm:p-0 p-2 md:text-md text-xs">
 							<span>Tous droits réservé, </span>
 							<span>MALTHUS ©{new Date().getFullYear()}</span>
 						</div>

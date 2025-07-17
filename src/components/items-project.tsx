@@ -19,7 +19,7 @@ export default function ItemsProject({ image, link }: ItemsProjectProps) {
 			onClick={() => router.push(`/works/${link}`)}
 		>
 			<div className="bg-gray-100 size-full flex items-center justify-center sm:p-0 px-2.5">
-				<div className="bg-gray-100 w-[32rem] h-68 drop-shadow-sm relative">
+				<div className="bg-red-100 w-[32rem] md:h-68 h-44 drop-shadow-sm relative">
 					<Image
 						className="absolute group-hover:scale-115 transition-all duration-600 object-cover"
 						src={image}

@@ -75,7 +75,7 @@ export default function Hero() {
 						className="flex items-center gap-2 cursor-pointer"
 						onClick={handlecopy}
 					>
-						<p className="text-3xl font-medium tracking-tighter">
+						<p className="sm:text-3xl text-xl font-medium tracking-tighter">
 							echicouamalthus@gmail.com
 						</p>
 						{isCopied ? (
@@ -87,7 +87,7 @@ export default function Hero() {
 				</div>
 
 				<div className="sm:col-span-4">
-					<p className="sm:text-4xl text-2xl text-justify font-medium tracking-tighter">
+					<p className="sm:text-4xl text-xl text-justify font-medium tracking-tighter">
 						Bonjour, je suis freelance spécialisé dans le develeppement
 						d&apos;application web et mobile depuis 2 ans — vivant à Abidjan,
 						travaillant à distance. Créons ensemble la nouvelle technologie de
