@@ -30,7 +30,7 @@ export default function Hero() {
 							initial={{ y: 200 }}
 							animate={{ y: 0 }}
 							transition={{ duration: 0.4, delay: 0.3 }}
-							className="sm:text-[12rem] text-7xl
+							className="sm:text-[12rem] text-6xl
            sm:leading-48 tracking-tighter uppercase font-semibold"
 						>
 							Malthus
@@ -42,7 +42,7 @@ export default function Hero() {
 							initial={{ y: 200 }}
 							animate={{ y: 0 }}
 							transition={{ duration: 0.4, delay: 0.3 }}
-							className="sm:text-[12rem] text-7xl
+							className="sm:text-[12rem] text-6xl
            sm:leading-48 tracking-tighter uppercase font-semibold"
 						>
 							echicoua
