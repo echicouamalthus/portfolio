@@ -21,7 +21,7 @@ export default function ItemsProject({ image, link }: ItemsProjectProps) {
 			<div className="bg-gray-100 size-full flex items-center justify-center sm:p-0 px-2.5">
 				<div className="bg-red-100 w-[32rem] md:h-68 h-44 drop-shadow-sm relative">
 					<Image
-						className="absolute group-hover:scale-115 transition-all duration-600 object-cover"
+						className="absolute group-hover:scale-115 transition-all duration-600 object-cover rounded-sm"
 						src={image}
 						alt="mon projets"
 					/>

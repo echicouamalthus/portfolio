@@ -4,10 +4,15 @@ import Image from 'next/image';
 import { MotionDiv } from '@/lib/motion-dev';
 import Hero from '@/components/hero';
 import picture from '../../public/malthus.png';
-import covermagic from '../../public/cover projet with app.png';
 import ItemsProject from '@/components/items-project';
+import { works } from '@/constants/lists';
 
 export default function Home() {
+	const work_lists = works.map(({ slug, cover_image }) => ({
+		slug,
+		cover_image,
+	}));
+
 	return (
 		<div>
 			<Hero />
@@ -27,7 +32,6 @@ export default function Home() {
 						<button className="bg-gray-100 text-black py-4 px-6 w-fit capitalize font-medium tracking-tighter">
 							voir plus
 						</button>
-
 					</MotionDiv>
 
 					<MotionDiv
@@ -36,7 +40,15 @@ export default function Home() {
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ duration: 0.6, delay: 0.5 }}
 					>
-						<ItemsProject image={covermagic} link={'case-gadget'} />
+						{work_lists.map(work => {
+							return (
+								<ItemsProject
+									image={work.cover_image}
+									link={work.slug}
+									key={work.slug}
+								/>
+							);
+						})}
 					</MotionDiv>
 				</div>
 			</div>

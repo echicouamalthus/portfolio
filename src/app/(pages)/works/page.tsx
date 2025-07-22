@@ -1,8 +1,13 @@
 import { MotionDiv, MotionH4 } from '@/lib/motion-dev';
-import covermagic from '../../../../public/cover projet with app.png';
 import ItemsProject from '@/components/items-project';
+import { works } from '@/constants/lists';
 
 export default function page() {
+	const work_lists = works.map(({ slug, cover_image }) => ({
+		slug,
+		cover_image,
+	}));
+
 	return (
 		<div>
 			<div className="max-w-7xl mx-auto flex flex-col justify-between sm:gap-30 gap-10 px-4 py-8">
@@ -30,7 +35,7 @@ export default function page() {
 						transition={{ duration: 0.6, delay: 0.3 }}
 					>
 						<h4 className="font-medium text-4xl tracking-tighter">
-							projets 2020 - 2024
+							projets 2024 - 2025
 						</h4>
 					</MotionDiv>
 
@@ -40,7 +45,15 @@ export default function page() {
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ duration: 0.6, delay: 0.5 }}
 					>
-						<ItemsProject image={covermagic} link={'case-gadget'} />
+						{work_lists.map(work => {
+							return (
+								<ItemsProject
+									image={work.cover_image}
+									link={work.slug}
+									key={work.slug}
+								/>
+							);
+						})}
 					</MotionDiv>
 				</div>
 			</div>
